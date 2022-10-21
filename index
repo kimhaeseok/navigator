@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+ <meta name="description" content="pcwk html" >
+ <meta name="keywords" content="html5, css3, javascipt6, jQuery">
+ <meta charset="UTF-8">
+ <style>       
+ *{
+ margin:0;
+ padding:0;
+ }
+ div{
+ width:80px;
+ height:80px;
+ border:1px solid #000;
+ background-color:#ff0;
+ }
+ </style>
+ <title>제목</title>
+   <!-- javascript -->
+   <script>
+ window.onload = function(){
+	let bt =document.getElementById("bt");
+	
+	bt.onclick=function(){
+		//console.log(`bt onclick`);
+		
+		let divE=document.createElement('div');
+		let pE=document.createElement('p');
+		let txt=document.createTextNode('!카라멘야!');
+		
+		pE.appendChild(txt);//p tag에 식맛쇼
+		divE.appendChild(pE);//div p tag 연결
+	//body에  div연결
+	document.body.appendChild(divE);
+		
+		
+	};
+ };
+   </script>
+ </head>
+ <body>
+ 
+ <button id="bt">오점뭐?</button>
+    
+ </body>
+ </html>
