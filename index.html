@@ -9,9 +9,12 @@
  margin:0;
  padding:0;
  }
+ .a{
+ width:100px;
+ height:100px}
  div{
- width:80px;
- height:80px;
+ width:100px;
+ height:100px;
  border:1px solid #000;
  background-color:#ff0;
  }
@@ -27,7 +30,7 @@
 		
 		let divE=document.createElement('div');
 		let pE=document.createElement('p');
-		let txt=document.createTextNode('!카라멘야!');
+		let txt=document.createTextNode('뭐 먹었어');
 		
 		pE.appendChild(txt);//p tag에 식맛쇼
 		divE.appendChild(pE);//div p tag 연결
@@ -41,7 +44,7 @@
  </head>
  <body>
  
- <button id="bt">오점뭐?</button>
+ <button id="bt" class="a">상현아</button>
     
  </body>
  </html>
