@@ -5,46 +5,49 @@
  <meta name="keywords" content="html5, css3, javascipt6, jQuery">
  <meta charset="UTF-8">
  <style>       
- *{
- margin:0;
- padding:0;
+ .bg{
+ background-color:#333;
+ color: white;
+ padding:40px;
+ margin-bottom:40px;
  }
- .a{
- width:100px;
- height:100px}
- div{
- width:100px;
- height:100px;
- border:1px solid #000;
- background-color:#ff0;
- }
+ .inner{
+ padding:20px;
+ background-color:#999;
+  }
  </style>
- <title>제목</title>
+ <title>jquery</title>
    <!-- javascript -->
+ 
+ <script src="/PC_HTML/js/jquery3.6.1.js"></script>
    <script>
- window.onload = function(){
-	let bt =document.getElementById("bt");
-	
-	bt.onclick=function(){
-		//console.log(`bt onclick`);
-		
-		let divE=document.createElement('div');
-		let pE=document.createElement('p');
-		let txt=document.createTextNode('자살 마려워~~~');
-		
-		pE.appendChild(txt);//p tag에 식맛쇼
-		divE.appendChild(pE);//div p tag 연결
-	//body에  div연결
-	document.body.appendChild(divE);
-		
-		
-	};
- };
+   $(document).ready(function(){
+	   console.log('Hello, world!');
+	   
+	   $(".wrap1").mouseover(function() {
+	   		$(".display").append('<strong>싫어</strong>')
+	   });
+	   
+	   		$(".wrap2").mouseenter(function(){
+	   			$(".display").append('<em>부엉</em>')
+	   });
+	   		$(".wrap1").click(function(){
+	   			$(".display").append('I want die')
+	   		});
+   });
+   </script>
    </script>
  </head>
  <body>
- 
- <button id="bt" class="a">마려워 마려워</button>
-    
+ 	<div class="wrap1 bg">
+ 	<div class="inner">mouseover</div>
+ 	</div>
+ 	
+ 	<div class="wrap2 bg">
+ 	<div class="inner">mouseenter</div>
+ 	</div>
+ 	
+ 	<div class="display"></div>
+ 	
  </body>
  </html>
